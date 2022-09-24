@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** This Fetch API interface represents a resource request. */
 interface Request extends Body {
     readonly cache: RequestCache
@@ -14,12 +16,14 @@ interface Request extends Body {
     readonly url: string
 }
 
-/*
+pipe(
+    Request.default,
+    addBasicAuth(credentials),
+    noCache(),
+    customHeader("X-SOCRATES"),
+)
 
-pipe(Request.default,
-  addBasicAuth(credentials),
-  noCache(),
-  customHeader("X-SOCRATES"))
+/*  F# with |> (pipe operator)
 
 Request.default
   |> addBasicAuth(credentials)
