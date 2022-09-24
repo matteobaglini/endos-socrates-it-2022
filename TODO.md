@@ -1,10 +1,10 @@
--   [ ] intro to the topic w/ drawing
--   [ ] Endo reification (foo/bar/endoInt/endoString/endoParametric)
--   [ ] Endo construction HOF (addOne/adder/const)
--   [ ] combination == Semigroup
--   [ ] combination of combination (Fractal design/Tree structure)
--   [ ] Endo id+combination == Monoid
--   [ ] combination custom == Condition
--   [ ] many Endo combination w/ Foldable
--   [ ] many Endo with seed == Pipe
--   [ ] scenari: builder of "big" object
+-   intro to the topic w/ drawing
+-   Endo reification (foo/bar/endoInt/endoString/endoParametric)
+-   Endo construction HOF (addOne/adder/const)
+-   combination == Semigroup
+-   combination of combination (Fractal design/Tree structure)
+-   Endo id+combination == Monoid
+-   combination custom == Condition
+-   many Endo combination w/ Foldable
+-   many Endo with seed == Pipe
+-   scenari: builder of "big" object

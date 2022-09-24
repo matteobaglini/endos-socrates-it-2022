@@ -1,33 +1,3 @@
-type Endo<A> = (x: A) => A
-
-function adder(i: number): Endo<number> {
-    return (x) => x + i
-}
-
-function constant(v: number): Endo<number> {
-    return (x) => v
-}
-
-function combine<A>(first: Endo<A>, second: Endo<A>): Endo<A> {
-    return (x) => second(first(x))
-}
-
-function identity<A>(): Endo<A> {
-    return (x) => x
-}
-
-function combineMany<A>(...endos: Endo<A>[]): Endo<A> {
-    return endos.reduce(combine)
-}
-
-function pipe<A>(seed: A, ...endos: Endo<A>[]): A {
-    return endos.reduce(combine, identity())(seed)
-}
-
-function cond<A>(test: boolean, onThen: Endo<A>, onElse: Endo<A>): Endo<A> {
-    return test ? onThen : onElse
-}
-
 type Invoice = {
     number: string
     shippingAddress: string
@@ -68,6 +38,7 @@ function addressInfo(customerId: number): Endo<Invoice> {
         billingAddress: "different",
     }
     const preferences = { useSameAddressForBilling: true }
+
     return cond(
         preferences.useSameAddressForBilling,
         combineMany(

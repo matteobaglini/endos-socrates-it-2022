@@ -1,7 +1,3 @@
-// FP Jargon
-// https://github.com/hemanth/functional-programming-jargon/blob/master/readme.md
+const value = pipe(100, adder(1), adder(2), adder(3))
 
-// nLab - Math Wiki
-// https://ncatlab.org/nlab/show/endomorphism
-
-console.log("Endomorphisms are here!")
+console.log(value)
